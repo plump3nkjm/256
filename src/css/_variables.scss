@@ -1,0 +1,58 @@
+//ブレークポイント設定
+$breakpoints: (
+	"xs": "screen and (max-width: 374px)",
+	"sm": "screen and (max-width: 750px)",
+	"lg": "screen and (min-width: 751px)"
+)
+!default;
+//細かい方//
+// $breakpoints: (
+//         "xxs": "screen and (max-width: 374px)",
+//         "xs": "screen and (max-width: 450px)",
+//         "sm": "screen and (max-width: 768px)",
+//         "md": "screen and (max-width: 1024px)",
+//         "lg": "screen and (max-width: 1400px)",
+//         "xl": "screen and (min-width: 1401px)"
+// ) !default;
+
+//デフォルト値設定
+$spBasicWidth: 750;
+$font-default: "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese",sans-serif;
+$font-size-default: 1.5rem;
+$line-hight-default: 1.7;
+
+//ミックスイン定義
+@mixin xs() {
+	@media #{map-get($breakpoints, "xs")} {
+		@content;
+	}
+}
+@mixin sm() {
+	@media #{map-get($breakpoints, "sm")} {
+		@content;
+	}
+}
+@mixin lg() {
+	@media #{map-get($breakpoints, "lg")} {
+		@content;
+	}
+}
+@mixin svw($width) {
+	width: ($width/$spBasicWidth*100vw);
+}
+@mixin svh($height) {
+	height: ($height/$spBasicWidth*100vw);
+}
+@mixin svm($top, $bottom: 0, $side: 0) {
+	@if $side == 'auto' {
+		margin: ($top/$spDesignWidth*100vw) auto ($bottom/$spDesignWidth*100vw);
+	} @else {
+		margin: ($top/$spDesignWidth*100vw) ($side/$spDesignWidth*100vw) ($bottom/$spDesignWidth*100vw);
+	}
+}
+@mixin svp($top, $bottom: 0, $side: 0) {
+	padding: ($top/$spDesignWidth*100vw) ($side/$spDesignWidth*100vw) ($bottom/$spDesignWidth*100vw);
+}
+@function smPer($val) {
+	@return percentage($val / $spBasicWidth);
+}

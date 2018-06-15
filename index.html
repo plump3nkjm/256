@@ -2,40 +2,78 @@
 <html lang="ja">
 
 <head>
-	<meta charset="UTF-8">
-	<title>template</title>
-	<meta name="description" content="紹介文">
-	<meta name="keywords" content="キーワード">
-	<meta name="author" content="著作者">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<!-- 電話番号などを自動リンクしないようにする -->
-	<meta name="format-detection" content="telephone=no">
-	<!-- IEを標準モードにする -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- OGP設定 -->
-		<meta property="og:title" content="ページタイトル">
-  	<meta property="og:url" content="このページのURL(パラメータ除外)">
-  	<meta property="og:image" content="サムネイル画像を絶対パスで指定">
-  	<meta property="og:site_name" content="サイト名">
-		<meta property="og:type" content="website" />
-  	<meta property="og:description" content="ページの説明">
-		<meta name="twitter:card" content="summary_large_image" />
-		<!-- OGP設定 ここまで -->
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/page.js"></script>
+  <meta charset="UTF-8">
+  <title>256 OFFICIAL</title>
+  <meta name="description" content="紹介文">
+  <meta name="keywords" content="キーワード">
+  <meta name="author" content="著作者">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- 電話番号などを自動リンクしないようにする -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- IEを標準モードにする -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- OGP設定 -->
+  <meta property="og:title" content="256 OFFICIAL">
+  <meta property="og:url" content="このページのURL(パラメータ除外)">
+  <meta property="og:image" content="サムネイル画像を絶対パスで指定">
+  <meta property="og:site_name" content="サイト名">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="ページの説明">
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- OGP設定 ここまで -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/page.js"></script>
 </head>
 
 <body>
-	<header>
-		<nav></nav>
-	</header>
+  <header>
+      <nav>
+        <ul>
+          <li>TOP</li>
+          <li>PROFILE</li>
+          <li>DISCOGRAPHY</li>
+          <li>LIVE</li>
+          <li>CONTACT</li>
+        </ul>
+    </nav>
+    <div class="icons">
+      <i><img src="img/common/facebook.svg" alt="facebook"></i>
+      <i><img src="img/common/twitter.svg" alt="twitter"></i>
+      <i><img src="img/common/line.svg" alt="LINE"></i>
+    </div>
+    <div class="logo">
+      <img src="img/common/logo_white.svg" alt="256">
+    </div>
+  </header>
 
-	<main>
-		<article>
-		</article>
-	</main>
 
-	<footer></footer>
+  <main>
+    <article>
+    </article>
+    <aside>
+      <!-- 256公式アカウントのタイムライン表示 -->
+      <div class="tweets">
+        <h2>Tweets</h2>
+        <a class="twitter-timeline" data-width="342" data-height="500" href="https://twitter.com/256nigoroku?ref_src=twsrc%5Etfw">Tweets by 256nigoroku</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <!-- 最新PVを表示 -->
+      <div class="youtube">
+        <h2>Video</h2>
+        <div class="y1">
+          <div class="y2">
+            <iframe  src="https://www.youtube.com/embed/LdKtdfQkPeg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <footer>
+  <!-- 最新ニュースを流すかどうか（アニメーション？でスライド式） -->
+  <div class="news">
+    <p>新しいTwitterアカウントを作成しました。新しいTwitterアカウントを作成しました。新しいTwitterアカウントを作成しました。</p>
+  </div>
+</footer>
+
 </body>
 
 </html>

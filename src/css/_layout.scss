@@ -20,6 +20,9 @@ img {
 a:hover {
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -96,7 +99,7 @@ header {
 }
 
 
-main {
+#top {
   position: relative;
     height: 938px;
     background: url(../img/catch.jpg) no-repeat top/cover;
@@ -146,5 +149,64 @@ footer {
     background: #cccbcdab;
     color: #fff;
     text-align: center;
+  }
+}
+
+#another {
+  article {
+  text-align: center;
+    h2,h3 {
+      display: inline-block;
+      border-bottom: 1px solid #01040c;
+    }
+    h2 {
+      margin: 50px 0 50px;
+    }
+    h3 {
+      margin: 0 0 15px;
+    }
+    .s1,.s2 {
+      margin: 0 auto;
+      width: 900px;
+      text-align: left;
+    }
+    .s1 {
+      .catch {
+        width: 900px;
+        height: 476px;
+        background: url(../img/profile/profile.jpg) center top / cover;
+      }
+      p {
+        margin-top: 40px;
+        font-size: 14px;
+      }
+    }
+    .s2 {
+      margin:  100px auto 0;
+      .member {
+        margin: 0 0 100px 0;
+      }
+      .column{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .c1 {
+          margin: 0 auto;
+          width: 50%;
+          text-align: center;
+          figure {
+            width: 350px;
+          }
+        }
+        .c2 {
+          width: 50%;
+          .tw_link {
+            display: inline-block;
+            margin: 0 auto;
+            width: 128px;
+          }
+        }
+      }
+    }
   }
 }

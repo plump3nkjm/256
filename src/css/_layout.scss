@@ -61,10 +61,14 @@ header {
   align-items: center;
   margin: 0 0 0 0;
   width: 100%;
+  a {
+    color: #0a1737;
+  }
   nav {
     margin: 0 auto;
     width: 560px;
     background: #fff;
+    color: #0a1737;
     ul {
       display: flex;
       justify-content: space-between;
@@ -152,7 +156,7 @@ footer {
   }
 }
 
-#another {
+#profile {
   article {
   text-align: center;
     h2,h3 {
@@ -204,6 +208,58 @@ footer {
             display: inline-block;
             margin: 0 auto;
             width: 128px;
+          }
+        }
+      }
+    }
+  }
+}
+#discography {
+  article {
+  text-align: center;
+    h2,h3 {
+      display: inline-block;
+      border-bottom: 1px solid #01040c;
+    }
+    h2 {
+      margin: 50px 0 50px;
+    }
+    h3 {
+      margin: 0 0 15px;
+    }
+    .s1,.s2 {
+      margin: 0 auto;
+      width: 900px;
+      text-align: left;
+    }
+    .s1 {
+      .releases {
+        &>div {
+          text-align: center;
+          figure {
+            margin: 0 auto;
+            width: 500px;
+          }
+        }
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    .s2 {
+      margin:  100px auto 0;
+      .demos {
+        margin: 0 auto;
+        width: 671px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        .demo {
+          width: 50%;
+          text-align: center;
+          figure {
+            width: 243px;;
           }
         }
       }

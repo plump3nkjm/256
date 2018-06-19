@@ -5,6 +5,8 @@ import SentenceMove from './modules/sentenceMove'
 import WindowOrientation from './modules/windowOrientation'
 import accordion from './modules/accordion'
 import validate from './modules/validate'
+import schedule from './modules/schedule'
+
 
 
 
@@ -12,7 +14,10 @@ import validate from './modules/validate'
 ScrollHover();
 WindowOrientation();
 if(document.getElementById('live')){
-  accordion();
+  schedule();
+  window.onload = () => {
+    accordion();
+  }
 }
 if(document.getElementById('contact')){
   validate();

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>256 OFFICIAL</title>
+  <meta name="description" content="紹介文">
+  <meta name="keywords" content="キーワード">
+  <meta name="author" content="著作者">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- 電話番号などを自動リンクしないようにする -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- IEを標準モードにする -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- OGP設定 -->
+  <meta property="og:title" content="256 OFFICIAL">
+  <meta property="og:url" content="このページのURL(パラメータ除外)">
+  <meta property="og:image" content="サムネイル画像を絶対パスで指定">
+  <meta property="og:site_name" content="サイト名">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="ページの説明">
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- OGP設定 ここまで -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+      <nav>
+        <ul>
+          <li><a href="/">TOP</a></li>
+          <li><a href="/profile.html">PROFILE</a></li>
+          <li><a href="/discography.html">DISCOGRAPHY</a></li>
+          <li><a href="/live.html">LIVE</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+      <i><img src="img/common/facebook.svg" alt="facebook"></i>
+      <i><img src="img/common/twitter.svg" alt="twitter"></i>
+      <i><img src="img/common/line.svg" alt="LINE"></i>
+    </div>
+  </header>
+
+
+  <main id="contact">
+    <article>
+      <h2>CONTACT</h2>
+      <div class="s1">
+        <form name="form" action="#">
+          <div>
+          <div class="parts">
+            <div class="validate">※入力必須項目です。</div>
+            <label for="name">name</label>
+            <input type="text" id="name" name="name">
+
+          </div>
+          <div class="parts">
+             <div class="validate">※入力必須項目です。</div>
+            <label for="mail">mail</label>
+            <input type"email" id="mail" name="mail">
+          </div>
+          <label>message</label>
+          <textarea rows="10" cols='60'></textarea>
+          <button type="submit">送信</button>
+          </div>
+        </form>
+      </div>
+    </article>
+  </main>
+  <script src="js/page.js"></script>
+
+</body>
+
+</html>
+
+<!--
+【フレームタグ】
+<section>...見出し(h1,h2など)を伴う
+<article>...記事、文章のまとまり
+<aside>  ...補足情報
+<nav>    ...ナビゲーション
+
+【クラス命名規則】
+セクションを表す時...「s+数字」
+セクションの中のラッパークラス...「content」
+ラッパークラスが欲しい時...「囲いたい要素名+wrapper」
+横に長い要素...「c+数字」
+縦に長い要素...「r+数字」
+箱型の要素...「b+数字」
+-->

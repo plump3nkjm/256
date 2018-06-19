@@ -4,9 +4,16 @@ import ScrollHover from './modules/scrollHover'
 import SentenceMove from './modules/sentenceMove'
 import WindowOrientation from './modules/windowOrientation'
 import accordion from './modules/accordion'
+import validate from './modules/validate'
+
 
 
 // 共通
 ScrollHover();
 WindowOrientation();
-accordion();
+if(document.getElementById('live')){
+  accordion();
+}
+if(document.getElementById('contact')){
+  validate();
+}

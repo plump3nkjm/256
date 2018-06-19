@@ -1,4 +1,3 @@
-
 html {
   font-size: 62.5%;
 }
@@ -20,9 +19,11 @@ img {
 a:hover {
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -33,15 +34,14 @@ p {
 }
 
 article *,
-header *,
 footer *,
+header *,
 nav * {
   box-sizing: border-box;
 }
 
 .visible-lg {
   display: none;
-
   @include lg() {
     display: block;
   }
@@ -49,7 +49,6 @@ nav * {
 
 .visible-sm {
   display: none;
-
   @include sm() {
     display: block;
   }
@@ -59,40 +58,47 @@ header {
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 0 0 0;
+  margin: 0;
   width: 100%;
+
   a {
     color: #0a1737;
   }
+
   nav {
     margin: 0 auto;
     width: 560px;
     background: #fff;
     color: #0a1737;
+
     ul {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       li {
         display: inline-block;
         list-style: none;
       }
     }
   }
+
   .icons {
     position: absolute;
     top: 50%;
     right: 30px;
     display: flex;
     justify-content: space-between;
-    margin: -17.5px 0 0 0;
+    margin: -17.5px 0 0;
     width: 210px;
+
     i {
       display: inline-block;
       margin: 0 0 0 35px;
       width: 35px;
     }
   }
+
   .logo {
     position: absolute;
     top: 25px;
@@ -102,52 +108,59 @@ header {
   }
 }
 
-
 #top {
   position: relative;
-    height: 938px;
-    background: url(../img/catch.jpg) no-repeat top/cover;
-    aside {
-      position: absolute;
-      right: 0;
-      top: 30px;
-      margin: 0 0 30px 0;
-      width: 350px;
-      text-align: center;
-      .tweets {
-        margin: 0 auto 50px;
+  height: 938px;
+  background: url("../img/catch.jpg") no-repeat top/cover;
+
+  aside {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    margin: 0 0 30px;
+    width: 350px;
+    text-align: center;
+
+    .tweets {
+      margin: 0 auto 50px;
+      width: 310px !important;
+      height: 405px !important;
+
+      iframe {
+        display: inline-block;
         width: 310px !important;
         height: 405px !important;
-          iframe {
-          display: inline-block;
-          width: 310px !important;
-          height: 405px !important;
-          overflow-y: scroll;
-        }
+        overflow-y: scroll;
       }
-      .youtube {
-        margin: 0 auto 30px;
-        width: 350px;
-        text-align: center;
-        .y1{
-          width: 100%;
-          .y2 {
-            position: relative;
-            // padding-top: 56.25%;
-            iframe {
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-            }
+    }
+
+    .youtube {
+      margin: 0 auto 30px;
+      width: 350px;
+      text-align: center;
+
+      .y1 {
+        width: 100%;
+
+        .y2 {
+          position: relative;
+          // padding-top: 56.25%;
+          iframe {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
           }
         }
       }
+    }
   }
 }
+
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+
   .news {
     width: 100%;
     background: #cccbcdab;
@@ -158,52 +171,67 @@ footer {
 
 #profile {
   article {
-  text-align: center;
-    h2,h3 {
+    text-align: center;
+
+    h2,
+    h3 {
       display: inline-block;
       border-bottom: 1px solid #01040c;
     }
+
     h2 {
-      margin: 50px 0 50px;
+      margin: 50px 0;
     }
+
     h3 {
       margin: 0 0 15px;
     }
-    .s1,.s2 {
+
+    .s1,
+    .s2 {
       margin: 0 auto;
       width: 900px;
       text-align: left;
     }
+
     .s1 {
       .catch {
         width: 900px;
         height: 476px;
-        background: url(../img/profile/profile.jpg) center top / cover;
+        background: url("../img/profile/profile.jpg") center top / cover;
       }
+
       p {
         margin-top: 40px;
         font-size: 14px;
       }
     }
+
     .s2 {
-      margin:  100px auto 0;
+      margin: 100px auto 0;
+
       .member {
-        margin: 0 0 100px 0;
+        margin: 0 0 100px;
       }
-      .column{
+
+      .column {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .c1 {
           margin: 0 auto;
           width: 50%;
           text-align: center;
+
           figure {
             width: 350px;
           }
         }
+
         .c2 {
           width: 50%;
+
           .tw_link {
             display: inline-block;
             margin: 0 auto;
@@ -214,40 +242,52 @@ footer {
     }
   }
 }
+
 #discography {
   article {
-  text-align: center;
-    h2,h3 {
+    text-align: center;
+
+    h2,
+    h3 {
       display: inline-block;
       border-bottom: 1px solid #01040c;
     }
+
     h2 {
-      margin: 50px 0 50px;
+      margin: 50px 0;
     }
+
     h3 {
       margin: 0 0 15px;
     }
-    .s1,.s2 {
+
+    .s1,
+    .s2 {
       margin: 0 auto;
       width: 900px;
       text-align: left;
     }
+
     .s1 {
       .releases {
-        &>div {
+        & > div {
           text-align: center;
+
           figure {
             margin: 0 auto;
             width: 500px;
           }
         }
       }
+
       p {
         font-size: 14px;
       }
     }
+
     .s2 {
-      margin:  100px auto 0;
+      margin: 100px auto 0;
+
       .demos {
         margin: 0 auto;
         width: 671px;
@@ -255,45 +295,59 @@ footer {
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+
         .demo {
           width: 50%;
           text-align: center;
+
           figure {
-            width: 243px;;
+            width: 243px;
           }
         }
       }
     }
   }
 }
+
 #live {
   article {
-  text-align: center;
+    text-align: center;
+
     h2 {
       display: inline-block;
       border-bottom: 1px solid #01040c;
     }
+
     h2 {
-      margin: 50px 0 50px;
+      margin: 50px 0;
     }
-    .s1,.s2 {
+
+    .s1,
+    .s2 {
       margin: 0 auto;
       width: 900px;
       text-align: left;
     }
+
     .s1 {
       .catch {
         width: 900px;
         height: 476px;
-        background: url(../img/live/catch.jpg) center bottom / cover;
+        background: url("../img/live/catch.jpg") center bottom / cover;
       }
+
       p {
         margin-top: 40px;
         font-size: 14px;
       }
     }
+
     .s2 {
-      margin: 30px auto ;
+      margin: 30px auto;
+
+      .live {
+        margin: 0 auto 20px;
+      }
 
       .header {
         display: flex;
@@ -302,26 +356,37 @@ footer {
         padding: 10px 20px;
         width: 100%;
         border: 1px solid #000;
-        span {
+
+        img {
           display: inline-block;
           width: 35px;
         }
       }
+
       .inner {
         display: none;
+        overflow: hidden;
         width: 100%;
         height: 0;
         border: 1px solid #000;
         text-align: center;
-        transition: height 1s;
+        transition: height 0.5s;
+
         &.active {
-          display: block;
-        }
-        &.accordion {
-          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          // height: 500px;        }
+          &.accordion {
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // flex-direction: column;
+            height: 500px;
+          }
         }
       }
-
     }
   }
 }

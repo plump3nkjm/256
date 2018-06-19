@@ -7,13 +7,25 @@ export default () => {
 
 
   const accordionAction = ()=> {
-      let t = event.target.parentNode.querySelector('.inner');
-      console.log(t);
-      t.classList.toggle('active');
-      console.log('call');
-      setTimeout(()=>{
-        t.classList.toggle('accordion');
-      },10)
+    let t = event.target.parentNode.parentNode.querySelector('.inner');
+    //parentNodeでlivesが取れてしまうのを制御するためのif
+    if(event.target.parentNode.parentNode.classList.contains('lives')){
+      t = event.target.parentNode.querySelector('.inner');
+    }
+      if(t.classList.contains('active')){
+        console.log('contain');
+        t.classList.remove('accordion');
+        setTimeout(()=>{
+          t.classList.remove('active');
+        },500)
+      }
+      else {
+        console.log('no-contain');
+        t.classList.add('active');
+        setTimeout(()=>{
+          t.classList.add('accordion');
+        },10)
+      }
     }
     [].forEach.call(target, el => {
       el.addEventListener('click',accordionAction);

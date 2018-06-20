@@ -66,20 +66,3 @@ export default () => {
       }
     })
 }
-
-
-// <div class="live">
-//   <div class="header target">
-//     <h3>4/21(水) 下北沢MOSAiC</h3>
-//     <img src="img/live/btn_open.svg">
-//   </div>
-//     <div class="inner">
-//       <h4>ニアフレンズ&256 ツーマンライブイベント</h4>
-//       <h5>『青天の霹靂』</h5>
-//       <p>ニアフレンズ</p>
-//       <p>256</p>
-//       <p>THE BOY MEETS GIRL（ゲストアクト）</p>
-//       <p class="date">op/st 18:30/19:00</p>
-//       <p class="price">adv/d 2300/3000</p>
-//     </div>
-// </div>

@@ -15,6 +15,7 @@ export default () => {
       if(t.classList.contains('active')){
         console.log('contain');
         t.classList.remove('accordion');
+        t.parentNode.querySelector('.header').classList.remove('active')
         setTimeout(()=>{
           t.classList.remove('active');
         },500)
@@ -22,6 +23,7 @@ export default () => {
       else {
         console.log('no-contain');
         t.classList.add('active');
+        t.parentNode.querySelector('.header').classList.add('active')
         setTimeout(()=>{
           t.classList.add('accordion');
         },10)

@@ -2,6 +2,7 @@
 $breakpoints: (
 	"xs": "screen and (max-width: 374px)",
 	"sm": "screen and (max-width: 767px)",
+  "tb": "screen and (max-width: 1200px)",
 	"lg": "screen and (min-width: 768px)"
 )!default;
 
@@ -19,6 +20,11 @@ $line-hight-default: 1.7;
 }
 @mixin sm() {
 	@media #{map-get($breakpoints, "sm")} {
+		@content;
+	}
+}
+@mixin tb() {
+	@media #{map-get($breakpoints, "tb")} {
 		@content;
 	}
 }
@@ -43,6 +49,6 @@ $line-hight-default: 1.7;
 @mixin svp($top, $bottom: 0, $side: 0) {
 	padding: ($top/$spDesignWidth*100vw) ($side/$spDesignWidth*100vw) ($bottom/$spDesignWidth*100vw);
 }
-@function smPer($val) {
-	@return percentage($val / $spBasicWidth);
-}
+// @function vw($val) {
+// 	@return ($val / $spBasicWidth * 100vw);
+// }

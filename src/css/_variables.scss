@@ -2,7 +2,6 @@
 $breakpoints: (
 	"xs": "screen and (max-width: 374px)",
 	"sm": "screen and (max-width: 767px)",
-  "tb": "screen and (max-width: 1200px)",
 	"lg": "screen and (min-width: 768px)"
 )!default;
 
@@ -41,14 +40,27 @@ $line-hight-default: 1.7;
 }
 @mixin svm($top, $bottom: 0, $side: 0) {
 	@if $side == 'auto' {
-		margin: ($top/$spDesignWidth*100vw) auto ($bottom/$spDesignWidth*100vw);
+		margin: ($top/$spBasicWidth*100vw) auto ($bottom/$spBasicWidth*100vw);
 	} @else {
-		margin: ($top/$spDesignWidth*100vw) ($side/$spDesignWidth*100vw) ($bottom/$spDesignWidth*100vw);
+		margin: ($top/$spBasicWidth*100vw) ($side/$spBasicWidth*100vw) ($bottom/$spBasicWidth*100vw);
 	}
 }
 @mixin svp($top, $bottom: 0, $side: 0) {
-	padding: ($top/$spDesignWidth*100vw) ($side/$spDesignWidth*100vw) ($bottom/$spDesignWidth*100vw);
+	padding: ($top/$spBasicWidth*100vw) ($side/$spBasicWidth*100vw) ($bottom/$spBasicWidth*100vw);
 }
-// @function vw($val) {
-// 	@return ($val / $spBasicWidth * 100vw);
-// }
+@mixin svt($top) {
+	top: ($top/$spBasicWidth*100vw);
+}
+@mixin svb($bottom) {
+	bottom: ($bottom/$spBasicWidth*100vw);
+}
+@mixin svl($left) {
+	left: ($left/$spBasicWidth*100vw);
+}
+@mixin svr($right) {
+	right: ($right/$spBasicWidth*100vw);
+}
+
+@function vw($val) {
+	@return ($val / $spBasicWidth * 100vw);
+}
